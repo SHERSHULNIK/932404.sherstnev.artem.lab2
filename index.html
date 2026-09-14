@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>О себе</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 30px;
+            color: #241633;
+            font-family:'Montserrat', sans-serif;
+            
+            background:
+            radial-gradient(circle 1450px at 25% 25%, #dfbaf5 0%, transparent 45%, #ffffff 45%, transparent 10%),
+            radial-gradient(circle 900px at 80% 85%, #ffe1aa 0%, transparent 45%, #ffffff 45%, transparent 10%);
+   
+        }
+
+        main {
+            display: grid;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+            }
+
+        header,
+        section,
+        aside,
+        footer {
+            padding: 8px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.65);
+            box-shadow: 0 10px 30px rgba(75, 38, 100, 0.12);
+            backdrop-filter: blur(8px);
+            }
+        header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px;
+  
+        }
+        header img {
+            border-radius: 5%;
+            object-fit: cover;
+            flex-shrink: 0;
+            }
+        .project-images {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            }
+        figure {
+            margin: 0;
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <img
+    src="images/1.jpg"
+        alt="Портрет Артема Шерстнева"
+    width="200"
+    height="200"
+>
+    <h1>Артем Шерстнев</h1>
+    <p>Студент, монтажер, дизайнер</p>
+
+    </header>
+    <main>
+        <section>
+            <h2>Навыки</h2>
+
+            <ul>
+                <li>Графический дизайн</li>
+                <li>Монтаж видео</li>
+                <li>VFX</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Проекты</h2>
+
+            <div class="project-images">
+                <figure>
+                    <img
+        src="images/2.jpg"
+        alt="Пример графического дизайна"
+        width="350"
+        height="200"
+    >
+                </figure>
+                <figure>
+                    <img
+        src="images/3.jpg"
+        alt="Пример видеомонтажа и визуальных эффектов"
+        width="350"
+        height="200"
+    >
+                </figure>
+            </div>
+
+            <ol>
+                <li>Создание динамичных видеороликов</li>
+                <li>Разработка фирменного стиля</li>
+                <li>Продюсирование малых блогеров</li>
+            </ol>
+        </section>
+
+        <section>
+            
+            <h2>Обратная связь</h2>
+            
+            <form>
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+
+    </main>
+    <aside>
+        <h2>Любимое направление</h2>
+        <p>Цифровое искусство</p>
+    </aside>
+    <footer>
+        <p>&copy; 2026 Шерстнев Артем Игоревич</p>
+        <p>Контакты: <a href="mailto:sherstnev_work@mail.ru">sherstnev_work@mail.ru</a></p>
+    </footer>
+</body>
+</html>
