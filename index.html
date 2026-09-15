@@ -3,59 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>О себе</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            min-height: 100vh;
-            margin: 0;
-            padding: 30px;
-            color: #241633;
-            font-family:'Montserrat', sans-serif;
-            
-            background:
-            radial-gradient(circle 1450px at 25% 25%, #dfbaf5 0%, transparent 45%, #ffffff 45%, transparent 10%),
-            radial-gradient(circle 900px at 80% 85%, #ffe1aa 0%, transparent 45%, #ffffff 45%, transparent 10%);
-   
+        textarea {
+            min-height: 140px;
+            box-shadow: inset 0 0 8px rgba(40, 20, 70, 0.35);
+            font-family: monospace;
         }
-
-        main {
-            display: grid;
-            gap: 15px;
-            max-width: 800px;
-            margin: 0 auto;
-            }
-
-        .project-images {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            }
-
-        figure {
-            margin: 0;
-            }
-
-        header,
-        section,
-        aside,
-        footer {
-            padding: 8px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.65);
-            box-shadow: 0 10px 30px rgba(75, 38, 100, 0.12);
-            backdrop-filter: blur(8px);
-            }
-        header {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 10px;
-  
-        }
-        header img {
-            border-radius: 5%;
-            object-fit: cover;
-            flex-shrink: 0;
-            }
     </style>
 
 </head>
@@ -88,20 +42,21 @@
             <h2>Проекты</h2>
 
             <div class="project-images">
-                <figure>
+                <figure class="project-card">
                     <img
         src="images/2.jpg"
         alt="Пример графического дизайна"
-        width="350"
-        height="200"
+        width="376"
+        height="210"
     >
+                        <span class="favorite-icon" aria-label="Избранное">★</span>
                 </figure>
                 <figure>
                     <img
         src="images/3.jpg"
         alt="Пример видеомонтажа и визуальных эффектов"
-        width="350"
-        height="200"
+        width="376"
+        height="210"
     >
                 </figure>
             </div>
@@ -125,7 +80,7 @@
             </form>
         </section>
 
-        <aside>
+        <aside style="background-color: rgba(255, 255, 255, 0.7);">
             <h2>Любимое направление</h2>
             <p>Цифровое искусство</p>
         </aside>
