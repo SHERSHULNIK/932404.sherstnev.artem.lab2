@@ -73,9 +73,12 @@
             <h2>Обратная связь</h2>
             
             <form>
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="email" name="email" placeholder="Ваш email" required>
-                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                <label for="name">Ваше имя</label>
+                <input id="name" type="text" name="name" placeholder="Ваше имя" required>
+                <label for="email">Ваш email</label>
+                <input id="email" type="email" name="email" placeholder="Ваш email" required>
+                <label for="message">Ваше сообщение</label>
+                <textarea id="message" name="message" placeholder="Ваше сообщение" required></textarea>
                 <button type="submit">Отправить</button>
             </form>
         </section>
@@ -90,5 +93,23 @@
         <p>&copy; 2026 Шерстнев Артем Игоревич</p>
         <p>Контакты: <a href="mailto:sherstnev_work@mail.ru">sherstnev_work@mail.ru</a></p>
     </footer>
+    <script>
+        const sections = document.querySelectorAll("main > section");
+        const visibility = new Map([...sections].map(section => [section, 0]));
+
+        const sectionObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => visibility.set(entry.target, entry.intersectionRatio));
+
+            const activeSection = [...visibility]
+                .filter(([, ratio]) => ratio > 0)
+                .sort((first, second) => second[1] - first[1])[0]?.[0];
+
+            sections.forEach(section => {
+                section.classList.toggle("active", section === activeSection);
+            });
+        }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
+
+        sections.forEach(section => sectionObserver.observe(section));
+    </script>
 </body>
 </html>
